@@ -1,0 +1,9 @@
+| ID | Driver arquitectónico | Origen | ¿Por qué influye en la arquitectura? |
+| --- | --- | --- | --- |
+| **DA01** | Los módulos críticos (HCE, Triaje, Admisión) deben estar disponibles 24/7 con 99.99% anual. | AC01 - Disponibilidad | Condiciona la topología de despliegue (multi-zona), la estrategia de datos y los mecanismos de failover. |
+| **DA02** | El sistema debe absorber picos impredecibles de hasta ~14,000 usuarios concurrentes sin degradar el servicio. | AC03 - Escalabilidad | Obliga a servicios escalables horizontalmente, autoescalado y priorización del tráfico crítico. |
+| **DA03** | Las operaciones clínicas críticas deben responder en menos de 1–2 s (p95) bajo carga máxima. | AC02 - Rendimiento | Influye en el uso de caché, en la separación síncrono/asíncrono y en el aislamiento del servicio de Triaje. |
+| **DA04** | Los datos de salud deben protegerse en tránsito, en reposo y en el control de acceso, con trazabilidad total. | AC04 - Seguridad; RC01 | Influye en autenticación (SSO/MFA), autorización (RBAC), cifrado y auditoría inmutable. |
+| **DA05** | No debe perderse información clínica ante la falla de una zona o de un centro de datos completo. | AC05 - Recuperación ante desastres | Condiciona la replicación síncrona entre zonas y la existencia de un sitio DR. |
+| **DA06** | El sistema debe estar estructurado en servicios desacoplados para incorporar laboratorio, farmacia y telemedicina sin rediseñar el núcleo. | AC06 - Mantenibilidad | Obliga a separar responsabilidades por dominio y definir interfaces bien definidas entre componentes. |
+| **DA07** | El sistema debe intercambiar información clínica con terceros mediante estándares abiertos. | AC07 - Interoperabilidad; RC02; RC05 | Condiciona los contratos de API y el uso de HL7/FHIR en las integraciones. |
