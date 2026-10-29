@@ -14,7 +14,7 @@ Mostrar el **sistema como una sola caja**: quiénes lo usan y con qué sistemas 
 | Pregunta que responde | ¿Qué es el sistema, quién lo usa y con quién se integra? |
 | Audiencia | Dirección Médica, áreas usuarias, docentes, equipo de desarrollo y TI |
 | Qué **no** muestra | Tecnologías, servidores, bases de datos ni servicios internos |
-| Siguiente nivel | [`Nivel2-DiagramadeContenedores.md`](Nivel2-DiagramadeContenedores) |
+| Siguiente nivel | [`Nivel2-DiagramadeContenedores.md`](Nivel2-DiagramadeContenedores.md) |
 
 ---
 
